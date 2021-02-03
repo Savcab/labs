@@ -1,1 +1,15 @@
 Answers go here!
+Problem 1: The problem was that on line 249 in game_of_pointers_student1.cpp, they tried to assign
+            invaders[invaderRow][invaderRow] instead of invaders[invaderRow][invaderCol]
+
+Problem 2: On line 27 in game_of_pointers_student1 there is a semicolon after the first if 
+            statement
+
+Problem 3: In line 62 in game_of_pointers_student1, there is no statement for the for loop, so 
+            the variable colIdx never changes, so it never satisfies the end loop condition
+
+Problem 4: In line 218 of game_of_pointers_student2, it is deallocated as (n, m) instead of (m,n).
+            It's supposed to be (m,n) because invaders is opposite of defenders
+
+Problem 5: In ine 113 and 117 of game_of_pointers_student2, the student has the operations wrong,
+            the student wrote that if defenders win, then logically defender loses, and vice versa.

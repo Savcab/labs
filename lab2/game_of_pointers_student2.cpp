@@ -107,14 +107,14 @@ bool Skirmish(Warrior ***protectors, Warrior ***invaders, int n, int m, int skir
       return true;
     }
 
-    bool protectorLost = false;
+    bool protectorLost = false; //from here
     if (invader->weapon == protector->weapon)
     {
-      if (invader->power < protector->power)
+      if (invader->power > protector->power)
       {
         protectorLost = true;
       }
-      else if (protector->power < invader->power)
+      else if (protector->power > invader->power)
       {
         delete invader;
         invaders[skirmishLine][k] = nullptr;
@@ -124,7 +124,7 @@ bool Skirmish(Warrior ***protectors, Warrior ***invaders, int n, int m, int skir
       {
         outputFile << "Duel ends in draw" << std::endl;
       }
-    }
+    } //to here
     else
     { // different weapons -- the warrior with the axe wins
       if (invader->weapon == AXE)
@@ -215,5 +215,5 @@ int main(int argc, char **argv)
   }
 
   DeallocateWarriors(protectors, n, m);
-  DeallocateWarriors(invaders, n, m);
+  DeallocateWarriors(invaders, m, n);
 }
