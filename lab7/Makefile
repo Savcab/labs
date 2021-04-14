@@ -1,6 +1,6 @@
 CC = g++
 CPPFLAGS = -g -Wall -std=c++11
-GTEST_LL = -I /usr/include/gtest/ -l gtest -l gtest_main -pthread
+GTEST_LL = -I /usr/include/gtest/ -I /work/scratch/heap -l gtest -l gtest_main -pthread
 
 test: stonesTest
 	valgrind --leak-check=yes ./stonesTest
